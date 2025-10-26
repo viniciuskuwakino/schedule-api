@@ -1,0 +1,24 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: postgres-evoluservices-db
+    restart: always
+    environment:
+      POSTGRES_USER: "vinicius"
+      POSTGRES_PASSWORD: "password"
+      POSTGRES_DB: "meetingsdb"
+    ports:
+      - "7700:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+    networks:
+      - evoluservices-network
+
+networks:
+  evoluservices-network:
+    name: evoluservices-network
+    driver: bridge
+
+volumes:
+  db:
+    driver: local
