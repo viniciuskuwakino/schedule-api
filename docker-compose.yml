@@ -14,6 +14,23 @@ services:
     networks:
       - evoluservices-network
 
+  app:
+    build: .
+    container_name: schedule-api
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/meetingsdb
+      SPRING_DATASOURCE_USERNAME: vinicius
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"
+    networks:
+      - evoluservices-network
+    restart: always
+
 networks:
   evoluservices-network:
     name: evoluservices-network
