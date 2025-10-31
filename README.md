@@ -9,16 +9,11 @@ API REST em Spring Boot para gerenciamento de salas e reuniões corporativas, in
 
 ## Execução do projeto
 
-1. **Suba o banco de dados**
+1. **Suba toda a aplicação**
    ```bash
-   docker compose up -d
+   docker compose up -d --build
    ```
    O serviço PostgreSQL fica disponível em `localhost:7700` com usuário `vinicius` e senha `password`.
-
-2. **Execute a aplicação**
-   ```bash
-   ./mvnw spring-boot:run
-   ```
 
 3. **Acesse o Swagger**
    - URL: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
