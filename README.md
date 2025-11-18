@@ -35,7 +35,7 @@ API REST em Spring Boot para gerenciamento de salas e reuniões corporativas, in
 | GET    | `/rooms/{id}`           | Busca sala pelo id                           |
 | GET    | `/rooms/{id}/meetings`  | Lista reuniões da sala (paginado)            |
 | PATCH  | `/rooms/{id}`           | Atualiza parcialmente a sala                 |
-| DELETE | `/rooms/{id}`           | Remove a sala                                |
+| DELETE | `/rooms/{id}`           | Remove sala                                |
 
 ### Reuniões (`/meetings`)
 | Método | Caminho          | Descrição                                                         |
